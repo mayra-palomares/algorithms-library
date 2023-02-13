@@ -1,0 +1,49 @@
+{
+	"name": "algorithms-library",
+	"private": true,
+	"version": "1.0.0",
+	"description": "This is a library created with TypeScript for data structures and algorithms",
+	"author": "Mayra Palomares",
+	"type": "module",
+	"main": "./dist/algorithms-lib.umd.cjs",
+	"module": "./dist/algorithms-lib.js",
+	"types": "./dist/main.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/algorithms-lib.js",
+			"require": "./dist/algorithms-lib.umd.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "jest",
+		"lint": "eslint . --cache --fix --max-warnings=0",
+		"format": "prettier . --write",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.4.0",
+		"@types/node": "^18.13.0",
+		"@typescript-eslint/eslint-plugin": "^5.52.0",
+		"@typescript-eslint/parser": "^5.52.0",
+		"eslint": "^8.34.0",
+		"eslint-config-prettier": "^8.6.0",
+		"husky": "^8.0.3",
+		"jest": "^29.4.2",
+		"lint-staged": "^13.1.2",
+		"prettier": "2.8.4",
+		"ts-jest": "^29.0.5",
+		"typescript": "^4.9.3",
+		"vite": "^4.1.0",
+		"vite-plugin-dts": "^1.7.2"
+	},
+	"lint-staged": {
+		"*.js": "npm run lint",
+		"*.--write": "npm run format"
+	}
+}
