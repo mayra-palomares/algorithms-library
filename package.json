@@ -1,6 +1,6 @@
 {
 	"name": "algorithms-library",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "This is a library created with TypeScript for data structures and algorithms",
 	"author": "Mayra Palomares",
 	"type": "module",
