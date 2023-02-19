@@ -1,6 +1,6 @@
 {
 	"name": "algorithms-library",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "This is a library created with TypeScript for data structures and algorithms",
 	"author": "Mayra Palomares",
 	"type": "module",
@@ -16,6 +16,10 @@
 	"files": [
 		"dist"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mayra-palomares/algorithms-library.git"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
