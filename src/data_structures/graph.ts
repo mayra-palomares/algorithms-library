@@ -1,6 +1,6 @@
 class ItemNode<T> {
 	value: T;
-	edges: Array<ItemNode<T>>;
+	edges: Array<T>;
 
 	constructor(value: T) {
 		this.value = value;
@@ -29,7 +29,7 @@ class Graph<T> {
     removeNode(value: T): void {
         this.nodes = this.nodes.filter(node => node.value !== value);
         this.nodes.forEach(node => {
-            node.edges = node.edges.filter(edge => edge.value !== value);
+            node.edges = node.edges.filter(edge => edge !== value);
         })
     }
 
@@ -38,10 +38,10 @@ class Graph<T> {
         const node2 = this.getNode(value2);
 
         if(node1 && node2){
-            node1.edges.push(node2);
+            node1.edges.push(node2.value);
 
             if(!this.directed){
-                node2.edges.push(node1);
+                node2.edges.push(node1.value);
             }
         }
     }

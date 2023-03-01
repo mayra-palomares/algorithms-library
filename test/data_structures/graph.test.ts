@@ -41,11 +41,11 @@ describe("Graph", () => {
         graph.addNode(item2);
         graph.addEdge(item1, item2);
         const node1 = graph.getNode(item1);
-        const node2InEdge = node1?.edges.find(edge => edge.value  === item2);
+        const node2InEdge = node1?.edges.find(edge => edge  === item2);
         const node2 = graph.getNode(item2);
-        const node1InEdge = node2?.edges.find(edge => edge.value  === item1);
+        const node1InEdge = node2?.edges.find(edge => edge  === item1);
 		expect(node2InEdge).toBeDefined();
-        expect(node2InEdge?.value).toBe(item2);
+        expect(node2InEdge).toBe(item2);
         expect(node1InEdge).toBeUndefined();
 	});
 
@@ -57,12 +57,12 @@ describe("Graph", () => {
         graph.addNode(item2);
         graph.addEdge(item1, item2);
         const node1 = graph.getNode(item1);
-        const node2InEdge = node1?.edges.find(edge => edge.value  === item2);
+        const node2InEdge = node1?.edges.find(edge => edge  === item2);
         const node2 = graph.getNode(item2);
-        const node1InEdge = node2?.edges.find(edge => edge.value  === item1);
+        const node1InEdge = node2?.edges.find(edge => edge  === item1);
 		expect(node2InEdge).toBeDefined();
-        expect(node2InEdge?.value).toBe(item2);
+        expect(node2InEdge).toBe(item2);
         expect(node1InEdge).toBeDefined();
-        expect(node1InEdge?.value).toBe(item1);
+        expect(node1InEdge).toBe(item1);
 	});
 });
