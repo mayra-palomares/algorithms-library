@@ -7,5 +7,7 @@ export { default as Queue } from './data_structures/queue';
 export { default as Stack } from './data_structures/stack';
 
 // Searching algorithms
+export { printDFS, printDFSRec } from './searching/depth_first_search';
+export { printBFS } from './searching/breadth_first_search';
 
 // Sorting algorithms
